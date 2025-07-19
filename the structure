@@ -1,0 +1,26 @@
+src/
+│
+├── assets/             # الصور والأيقونات
+├── components/         # Components القابلة لإعادة الاستخدام (Sidebar, Header, TableRow...)
+│   ├── sidebar/
+│   ├── cards/
+│   ├── table/
+│   └── ...
+│
+├── layout/             # Layouts الأساسية (مثلاً DashboardLayout)
+│
+├── pages/              # كل صفحة رئيسية (Products, Orders, etc.)
+│   ├── Dashboard/
+│   ├── Products/
+│   ├── Customers/
+│   └── ...
+│
+├── services/           # API Calls (مثلاً productsService.js)
+│
+├── hooks/              # Custom hooks (لو استخدمت React Query أو Zustand)
+│
+├── utils/              # ملفات المساعدة (مثل formatDate.js أو constants.js)
+│
+├── App.jsx             # المكون الرئيسي
+├── main.jsx            # نقطة البداية
+└── index.css           # Tailwind + global styles
