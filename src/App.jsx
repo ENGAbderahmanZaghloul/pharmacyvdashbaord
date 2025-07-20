@@ -5,7 +5,6 @@ function App() {
   return (
     <section>
       <RouterProvider router={router} />
-      <h1>home</h1>
     </section>
   );
 }
