@@ -1,9 +1,13 @@
-import React from 'react'
+import ProductSecion from "../components/product adding/ProductSecion";
 
 const Products = () => {
   return (
-    <div>Products</div>
-  )
-}
+    <div>
+      <div>
+        <ProductSecion />
+      </div>
+    </div>
+  );
+};
 
-export default Products
+export default Products;
