@@ -19,7 +19,7 @@ const Layout = () => {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 bg-gray-100 p-4 overflow-auto">
+      <main className="flex-1 bg-gray-100 ">
         <Outlet />
       </main>
     </div>

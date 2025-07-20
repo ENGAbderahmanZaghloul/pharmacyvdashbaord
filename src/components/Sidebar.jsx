@@ -4,7 +4,7 @@ const Sidebar = () => {
   const location = useLocation();
   const { pathname } = location;
   return (
-    <div className="w-[200px] h-fit bg-[#000E2E]  text-white font-normal rounded-r-3xl px-5 py-10 ">
+    <div className="w-[200px] h-fit bg-[#000E2E]  text-white font-normal rounded-r-3xl px-5 py-10 absolute">
       <div className="flex justify-between">
         <div className="flex gap-2">
           <img src="/public/images/Logo.png" alt="" />
