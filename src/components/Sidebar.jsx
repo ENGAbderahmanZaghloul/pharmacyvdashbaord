@@ -1,5 +1,55 @@
 import { Link, useLocation } from "react-router-dom";
+const sidebarLi = [
+  {
+    patheName: "/overview",
+    icon: "/public/images/lists.png",
+    title: "Overview",
+  },
+  {
+    patheName: "/",
+    icon: "/images/products.png",
+    title: "Products",
+  },
+  {
+    patheName: "/orders",
+    icon: "/images/cart.png",
+    title: "Orders",
+  },
+  {
+    patheName: "/sales",
+    icon: "/images/sales.png",
+    title: "Sales",
+  },
+  {
+    patheName: "/customers",
+    icon: "/images/customers.png",
+    title: "Customers",
+  },
+  {
+    patheName: "/payments",
+    icon: "/images/dollar.png",
+    title: "Payments",
+  },
+];
 
+const sidebarLiHelp = [
+
+  {
+    patheName: "/help",
+    icon: "/images/help.png",
+    title: "Help & Support",
+  },
+  {
+    patheName: "/settings",
+    icon: "/images/setting.png",
+    title: "Settings",
+  },
+  {
+    patheName: "/logout",
+    icon: "/images/logout.png",
+    title: " Log Out",
+  },
+];
 const Sidebar = () => {
   const location = useLocation();
   const { pathname } = location;
@@ -13,6 +63,45 @@ const Sidebar = () => {
       </div>
       <div className="h-[2px] bg-white my-10"></div>
       <ul className="space-y-4">
+        {sidebarLi.map((link, index) => {
+          return (
+            <li
+              key={index}
+              className={`flex gap-1 hover:p-2 cursor-pointer h-10 hover:bg-[#2563EB] hover:rounded-full
+        ${
+          pathname === link.patheName
+            ? "bg-[#2563EB] text-white p-2 rounded-full"
+            : "hover:bg-[#2563EB] hover:text-white"
+        }`}
+            >
+              <img src={link.icon} className="h-6" alt="" />
+              <Link to={link.patheName} className="hover:text-blue-300">
+                {link.title}
+              </Link>
+            </li>
+          );
+        })}
+
+        <div className="h-[2px] bg-white !my-10"></div>
+
+        {sidebarLiHelp &&
+          sidebarLiHelp.map((link) => (
+            <li
+              className={`flex gap-1 hover:p-2 cursor-pointer h-10   hover:bg-[#2563EB] hover:rounded-full 
+    ${
+      pathname === link.patheName
+        ? "bg-[#2563EB] text-white p-2 rounded-full  "
+        : "hover:bg-[#2563EB] hover:text-white "
+    }`}
+            >
+              <img src={link.icon} className="h-6" alt="" />
+              <Link to={link.patheName} className="hover:text-blue-300">
+                {link.title}
+              </Link>
+            </li>
+          ))}
+      </ul>
+      {/* <ul className="space-y-4">
         <li
           className={`flex gap-1 hover:p-2 cursor-pointer   hover:bg-[#2563EB] hover:rounded-full
     ${
@@ -133,7 +222,7 @@ const Sidebar = () => {
             Log Out
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 };
