@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { DropdownMenuDemo } from "./DropdownMenuDemo";
 
 const Topbar = () => {
   const [showCalender, setShowCalender] = useState(false);
@@ -19,11 +19,11 @@ const Topbar = () => {
           Let's check your pharmacy today!
         </p>
       </div>
-      <form className="border rounded-full bg-slate-50 h-fit flex gap-3 px-3 py-1">
+      <form className="border rounded-full h-12  w-[320px] items-center flex gap-3 px-3 py-1">
         <img
           src="/public/images/Search.png"
           alt="search icon"
-          className="text-[#888888]"
+          className="text-[#000] h-5 "
         />
         <input
           type="search"
@@ -31,7 +31,7 @@ const Topbar = () => {
           value="Search"
         />
       </form>
-      <div className="border rounded-full bg-slate-50 h-fit flex gap-3 px-3 py-1">
+      <div className="border rounded-full  h-12 w-[140px] items-center flex gap-3 px-3 py-1">
         <button onClick={calenderHandler}>
           <img src="/public/images/calendar.png" alt="" />
         </button>
@@ -62,63 +62,59 @@ const Topbar = () => {
           </div>
         )}
       </div>
-      <div className="rounded-[50%] bg-slate-50 w-8 h-8 text-center place-content-center relative">
-        <span className="absolute bg-red-600 text-white w-4 h-4  bottom-5 left-4 text-xs rounded-full text-center">
-          5
-        </span>
-        <button onClick={notificationHandler}>
-          <img
-            src="/public/images/notification.png"
-            alt=""
-            className="w-6 h-6 "
-          />
-        </button>
-        {showNotification && (
-          <div
-            style={{
-              position: "fixed",
-              top: "18%",
-              left: "68%",
-              width: "30%",
-              height: "fit-content",
-              backgroundColor: "#fff",
-              border: "2px solid #ccc",
-              zIndex: 9999,
-              boxShadow: "0 0 10px rgba(0,0,0,0.2)",
-            }}
-          >
-            <div style={{ textAlign: "right", padding: "5px" }}>
-              <button onClick={notificationHandler}>❌</button>
-            </div>
-
+      <div className="flex items-center">
+        <div className="rounded-[50%]  w-8 h-8 text-center place-content-center relative">
+          <span className="absolute bg-red-600 text-white w-4 h-4  bottom-5 left-4 text-xs rounded-full text-center">
+            5
+          </span>
+          <button onClick={notificationHandler}>
+            <img
+              src="/public/images/notification.png"
+              alt=""
+              className="w-6 h-6 "
+            />
+          </button>
+          {showNotification && (
             <div
               style={{
-                width: "100%",
+                position: "fixed",
+                top: "18%",
+                left: "68%",
+                width: "30%",
                 height: "fit-content",
-                border: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px",
+                backgroundColor: "#fff",
+                border: "2px solid #ccc",
+                zIndex: 9999,
+                boxShadow: "0 0 10px rgba(0,0,0,0.2)",
               }}
-              className="py-3"
-              allowFullScreen
             >
-              <div className="bg-slate-50 rounded-full py-2">121212131</div>
-              <div className="bg-slate-50 rounded-full py-2">121212131</div>
-              <div className="bg-slate-50 rounded-full py-2">121212131</div>
-            </div>
-          </div>
-        )}
-      </div>
+              <div style={{ textAlign: "right", padding: "5px" }}>
+                <button onClick={notificationHandler}>❌</button>
+              </div>
 
-      <div className="rounded-full w-fit px-5  text-start bg-slate-50  place-content-center relative flex justify-between gap-2">
-        <div>
-          <h1>Admin</h1>
-          <p>admin@gmail.com</p>
+              <div
+                style={{
+                  width: "100%",
+                  height: "fit-content",
+                  border: "none",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "10px",
+                }}
+                className="py-3"
+                allowFullScreen
+              >
+                <div className="bg-slate-50 rounded-full py-2">121212131</div>
+                <div className="bg-slate-50 rounded-full py-2">121212131</div>
+                <div className="bg-slate-50 rounded-full py-2">121212131</div>
+              </div>
+            </div>
+          )}
         </div>
-        <button>
-          <img src="/public/images/ArrowLineDown-s.png" alt="" />
-        </button>
+
+        <div className="rounded-full w-fit px-5  text-start place-content-center relative flex justify-between gap-2">
+          <DropdownMenuDemo />
+        </div>
       </div>
     </section>
   );
