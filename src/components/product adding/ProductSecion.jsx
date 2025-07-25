@@ -33,9 +33,12 @@ const ProductSecion = () => {
             />
           );
         })}
-        <div>
-          <ProductTable />
-        </div>
+      </div>
+      <div>
+        <ProductTable />
+      </div>
+      <div className="ml-56">
+        <h1>تنبيلتمنبيتلمنبيتلمن</h1>
       </div>
     </section>
   );
