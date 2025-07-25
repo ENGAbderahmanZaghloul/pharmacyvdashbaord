@@ -1,6 +1,7 @@
 import Topbar from "./Topbar";
 import ProductInfoCard from "./ProductInfoCard";
 import ProductTable from "./ProductTable";
+import DataCard from "./DataCard";
 
 const ProductInfoCardArr = [
   {
@@ -34,11 +35,11 @@ const ProductSecion = () => {
           );
         })}
       </div>
-      <div>
-        <ProductTable />
-      </div>
       <div className="ml-56">
-        <h1>تنبيلتمنبيتلمنبيتلمن</h1>
+        <DataCard/>
+      </div>
+      <div className="mt-10">
+        <ProductTable />
       </div>
     </section>
   );
