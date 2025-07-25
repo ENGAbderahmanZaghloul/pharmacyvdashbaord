@@ -1,6 +1,6 @@
-import React from "react";
 import Topbar from "./Topbar";
 import ProductInfoCard from "./ProductInfoCard";
+import ProductTable from "./ProductTable";
 
 const ProductInfoCardArr = [
   {
@@ -33,9 +33,9 @@ const ProductSecion = () => {
             />
           );
         })}
-      </div>
-      <div className="ml-52">
-        <h1>اول واخر مرة ادخل ف تيم مع الحريم</h1>
+        <div>
+          <ProductTable />
+        </div>
       </div>
     </section>
   );
