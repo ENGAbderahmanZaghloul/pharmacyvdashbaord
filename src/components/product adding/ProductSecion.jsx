@@ -1,6 +1,6 @@
-import React from "react";
 import Topbar from "./Topbar";
 import ProductInfoCard from "./ProductInfoCard";
+import ProductTable from "./ProductTable";
 
 const ProductInfoCardArr = [
   {
@@ -34,7 +34,11 @@ const ProductSecion = () => {
           );
         })}
       </div>
+      <div>
+        <ProductTable/>
+      </div>
     </section>
+
   );
 };
 
