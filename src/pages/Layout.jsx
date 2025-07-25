@@ -23,7 +23,7 @@ const Layout = () => {
       <div >
         <Sidebar openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
       </div>
-      <main className="flex-1 bg-gray-100 transition-all duration-500 ease-in-out overflow-hidden">
+      <main className="flex-1 bg-gray-100 transition-all duration-500 ease-in-out ">
         <Outlet />
       </main>
     </div>
